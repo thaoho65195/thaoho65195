@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Css/portfolio.css">
+<link rel="icon" href="Image/logo.jpg" type="image/x-icon">
+<link rel="stylesheet" href="Css/main.style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://kit.fontawesome.com/cb8f931045.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<!--skill-->
+<style>
+.b-skills {
+    border-top: 10px solid #f9f9f9;
+    padding-top: 3%;
+    text-align: center;
+}
+.b-skills h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    height: 13vh;
+}
+.skill-item {
+    position: relative;
+    max-width: 250px;
+    width: 120%;
+    color: #555;
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+}
+.skill-item .chart, .skill-item .chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.skill-item .chart:before {
+    content: "";
+    width: 0;
+    height: 100%;
+}
+.skill-item .chart:before, .skill-item .percent {
+    display: inline-block;
+    vertical-align: middle;
+}
+.skill-item .percent {
+    position: relative;
+    line-height: 1.3;
+    font-size: 50px;
+    font-weight: 900;
+    z-index: 2;
+}
+.skill-item .percent:after {
+    content: attr(data-after);
+    font-size: 20px;
+}
+p {
+    font-weight: 700;
+}
+</style>
+</head>
+<body>
+<!--mouse-->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<!--menu-->
+
+<nav id="header" class="navbar navbar-expand-lg "> <a class="navbar-brand page-scroll logo" href="#about">Ngọc Thảo</a>
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item acvite" ><a class="nav-link page-scroll" href="#">HOME</a></li>
+    <li class="nav-item"><a class="nav-link page-scroll" href="#about"></a></li>
+    <li class="nav-item"><a class="nav-link page-scroll" href="#collection">GALLERY</a></li>
+    <li class="nav-item"><a class="nav-link page-scroll" href="#photo">PHOTOGAPHY</a></li>
+    <li class="nav-item"><a class="nav-link page-scroll" href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+<!--banner-->
+<section id="cover">
+  <h2 id="text">Welcome to my<br>
+    Portfolio</h2>
+  <img src="Image/may.png" id="background"> <img src="Image/cheo-do.gif" id="onglaido"><img src="Image/hoasen.png" id="hoasen"> </section>
+
+<!--about me -->
+<section id="about">
+  <div class="container-text">
+    <!--<div class="grid"-->
+    <div class="left"> <img src="Image/me.jpg" alt=""> </div>
+    <div class="right">
+      <h1>ABOUT ME</h1>
+      <p>My name is Ngoc Thao. I am living in Ho Chi Minh city and am a student at Arena Multimedia school, my major is Graphic Design. I am a cheerful, sociable and dynamic person. In my free time, I often read the news, watch movies and listen to music to relax.</p>
+    </div>
+  </div>
+</section>
+<!--skill-->
+
+<div class="b-skills">
+  <div class="container">
+    <h2>Our Skills</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="skill-item center-block">
+          <div class="chart-container">
+            <div class="chart " data-percent="70" data-bar-color="#23afe3"> <span class="percent" data-after="%">70</span> </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <p>ILLUSTRATION</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="skill-item center-block">
+          <div class="chart-container">
+            <div class="chart " data-percent="75" data-bar-color="#a7d212"> <span class="percent" data-after="%">75</span> </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <p>PHOTOSHOP</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="skill-item center-block">
+          <div class="chart-container">
+            <div class="chart " data-percent="70" data-bar-color="#ff4241"> <span class="percent" data-after="%">70</span> </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <p>INDESIGN</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="skill-item center-block">
+          <div class="chart-container">
+            <div class="chart " data-percent="65" data-bar-color="#edc214"> <span class="percent" data-after="%">65</span> </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p>DEAMWEAVER</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Collections-->
+<section id="collection">
+  <div class="container-fluid">
+    <h2 class="text-center" >COLLECTIONS</h2>
+    <div class="row">
+		
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card">
+          <figure> <img src="Image/Manipulation.png" class="w-100" alt=""> </figure>
+          <div class="content">
+            <p>Photoshop</p>
+          </div>
+        </div>
+      </div>      <div class="col-xs-12 col-sm-6 col-md-3">
+
+		
+        <div class="card">
+          <figure> <img src="Image/illustration.png" class="w-100" alt=""> </figure>
+          <div class="content">
+            <p>Illustration</p>
+          </div>
+        </div>
+      </div>
+		      <div class="col-xs-12 col-sm-6 col-md-3">
+
+        <div class="card">
+          <figure> <img src="Image/indesign.jpg" class="w-100" alt=""> </figure>
+          <div class="content">
+            <p>InDesign</p>
+          </div>
+        </div>
+      </div>
+				        <div class="col-xs-12 col-sm-6 col-md-3">
+
+        <div class="card">
+          <figure><img src="Image/SEM1.png" class="w-100" alt=""></figure>
+          <div class="content">
+            <p>Projects Sem 1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--photography-->
+<section id="photo">
+  <div class="container-fluid">
+    <h2 class="text-center" >PHOTOGRAPHY</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="image">
+          <picture> <img src="Image/cake1.jpg" class="w-100" alt=""> </picture>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="image">
+          <picture> <img src="Image/CAKE 9.png" class="w-100" alt=""> </picture>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="image">
+          <picture> <img src="Image/CAKE 5.jpg.jpg" class="w-100" alt=""> </picture>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="image">
+          <picture> <img src="Image/CAKE 8.png" class="w-100" alt=""> </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--hand drawing-->
+<div class="drawing">
+  <h1>Hand Drawing</h1>
+  <div class="gallery"> <img
+        src="Image/sketch01.png"
+        class="gallery__photo gallery__photo--p1"
+        alt=""
+      /> <img
+        src="Image/sketch.png"
+        class="gallery__photo gallery__photo--p2"
+        alt=""
+      /> <img
+        src="Image/Sketch02.png"
+        class="gallery__photo gallery__photo--p3"
+        alt=""
+      /> <img
+        src="Image/sketch03.png"
+        class="gallery__photo gallery__photo--p4"
+        alt=""
+      /> <img
+      src="Image/ Sketcheye.png"
+      class="gallery__photo gallery__photo--p5"
+      alt=""
+    /> </div>
+</div>
+<!--contact us-->	<section id="contact">
+  <div class="container">
+    <h2>CONTACT US</h2>
+    <div class="row100">
+      <div class="col">
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span class="text">First Name</span> <span class="line"></span> </div>
+      </div>
+      <div class="col">
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span class="text">Last Name</span> <span class="line"></span> </div>
+      </div>
+    </div>
+    <div class="row100">
+      <div class="col">
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span class="text">Email</span> <span class="line"></span> </div>
+      </div>
+      <div class="col">
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span class="text">Phone</span> <span class="line"></span> </div>
+      </div>
+    </div>
+    <div class="row100">
+      <div class="col">
+        <div class="inputBox textarea">
+          <textarea required="required"></textarea>
+          <span class="text">Type your messageHere...</span> <span class="line"></span> </div>
+      </div>
+    </div>
+    <div class="row100">
+      <div class="col">
+        <input type="submit" value="Send Message">
+      </div>
+    </div>
+  </div>
+</section>
+<!--footer--> 
+<!--<section id="codeopacity">
+  <footer>
+    <div class="footer-content">
+      <h3>Code Opacity</h3>
+      <p>Get connected with us on social networks!</p>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/profile.php?id=100048219164817"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.behance.net/ngocthao659d13"><i class="fa fa-behance"></i></a></li>
+        <li><a href="ngocthao65195@gmail.com"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCEv3m2chpFYba-b9xvmzzcQ"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/hongoc.thao/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/ThoH32429268"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.pinterest.com/ngocthao651951710/"><i class="fa fa-pinterest"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</section>-->
+<section id="codeopacity">
+  <footer>
+    <div class="footer-content">
+      <h3>Code Opacity</h3>
+      <p>Get connected with us on social networks!</p>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/profile.php?id=100048219164817"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.behance.net/ngocthao659d13"><i class="fa fa-behance"></i></a></li>
+        <li><a href="https://mail.google.com/mail/u/0/?pli=1#inbox"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCEv3m2chpFYba-b9xvmzzcQ"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/hongoc.thao/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/ThoH32429268"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-wordpress"></i></a></li>
+        <li><a href="https://www.pinterest.com/ngocthao651951710/"><i class="fa fa-pinterest"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</section>
+<div class="footer-bottom">
+  <p>Copyright &copy;2022 codeOpacity. designed by ngocthao</p>
+</div>
+<!--mouse -->
+<script> 
+            var cursor = $(".cursor"),
+                follower = $(".cursor-follower");
+
+            var posX = 0,
+                posY = 0,
+                mouseX = 0,
+                mouseY = 0;
+
+            TweenMax.to({}, 0.016, {
+                repeat: -1,
+                onRepeat: function() {
+                    posX += (mouseX - posX) / 9;
+                    posY += (mouseY - posY) / 9;
+
+                    TweenMax.set(follower, {
+                        css: {
+                            left: posX - 20,
+                            top: posY - 20
+                        }
+                    });
+
+                    TweenMax.set(cursor, {
+                        css: {
+                            left: mouseX,
+                            top: mouseY
+                        }
+                    });
+                }
+            });
+
+            $(document).on("mousemove", function(e) {
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+            });
+
+            $(".portfolio-item img").on("mouseenter", function() {
+                cursor.addClass("active");
+                follower.addClass("active");
+            });
+
+            $(".portfolio-item img").on("mouseleave", function() {
+                cursor.removeClass("active");
+                follower.removeClass("active");
+            });
+	</script>
+<!--skill-->
+<script src="PIECHART/plugins/jquery-2.2.4.min.js"></script>
+<script src="PIECHART/plugins/jquery.appear.min.js"></script>
+<script src="PIECHART/plugins/jquery.easypiechart.min.js"></script>
+<script>
+    'use strict';
+
+var $window = $(window);
+
+function run()
+{
+	var fName = arguments[0],
+		aArgs = Array.prototype.slice.call(arguments, 1);
+	try {
+		fName.apply(window, aArgs);
+	} catch(err) {
+		 
+	}
+};
+ 
+
+function _chart ()
+{
+	$('.b-skills').appear(function() {
+		setTimeout(function() {
+			$('.chart').easyPieChart({
+				easing: 'easeOutElastic',
+				delay: 3000,
+				barColor: '#369670',
+				trackColor: '#fff',
+				scaleColor: false,
+				lineWidth: 21,
+				trackWidth: 21,
+				size: 250,
+				lineCap: 'round',
+				onStep: function(from, to, percent) {
+					this.el.children[0].innerHTML = Math.round(percent);
+				}
+			});
+		}, 150);
+	});
+};
+ 
+
+$(document).ready(function() {
+  
+	run(_chart);
+  
+    
+});
+ </script>
+</body>
+</html>
